@@ -98,7 +98,7 @@ scanorama = [ "scanorama" ]
 scrublet = [ "scikit-image>=0.25" ]
 # highly_variable_genes method 'seurat_v3'
 skmisc = [ "scikit-misc>=0.5.1" ]
-scanpy2 = [ "anndata>=0.13rc3", "igraph>=0.10.8", "scikit-misc>=0.5.1" ]
+scanpy2 = [ "anndata>=0.13rc3", "hv-anndata>=0.0.3a4", "igraph>=0.10.8", "scikit-misc>=0.5.1" ]
 
 [dependency-groups]
 dev = [
@@ -131,7 +131,7 @@ docs = [
     "sphinx-book-theme>=1.1",
     "sphinx-copybutton",
     "sphinx-design",
-    "sphinx-exec-jupyter>=0.2.1",
+    "sphinx-exec-jupyter[holoviews]>=0.2.1",
     "sphinx-issues>=5.0.1",
     "sphinxcontrib-bibtex",
     "sphinxcontrib-katex",
@@ -291,7 +291,7 @@ markers = [
     "gpu: tests that use a GPU (unused, required by anndata.tests.helpers)",
     "array_api: tests that use array_api (unused, required by anndata.tests.helpers)",
 ]
-norecursedirs = [ "tests/_images" ]
+norecursedirs = [ "tests/_images", "src/scanpy/plotting/_v2" ]
 strict = true
 testpaths = [ "./tests", "./ci", "scanpy" ]
 
